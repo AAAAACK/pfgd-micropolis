@@ -133,6 +133,9 @@ public class TileConstants
 	static final char FIRESTATION = 765;
 	static final char POLICESTATION = 774;
 	static final char STADIUM = 784;
+	/*This is where the amusement park is at */
+	static final char AMUSEMENTPARK = 961;
+	/*FIX THIS IF SOMETHING GOES WRONG*/
 	static final char FULLSTADIUM = 800;
 	static final char NUCLEAR = 816;
 	static final char LASTZONE = 826;

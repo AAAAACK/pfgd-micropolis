@@ -40,6 +40,8 @@ class MapScanner extends TileBehavior
 		POLICESTATION,
 		STADIUM_EMPTY,
 		STADIUM_FULL,
+		/*HERE ITS EDITED*/
+		AMUSEMENTPARK,
 		AIRPORT,
 		SEAPORT;
 	}

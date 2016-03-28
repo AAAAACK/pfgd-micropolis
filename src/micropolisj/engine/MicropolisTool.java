@@ -24,6 +24,9 @@ public enum MicropolisTool
 	FIRE(3, 500),
 	POLICE(3, 500),
 	STADIUM(4, 5000),
+	/* THIS IS AN ADDITION*/
+	AMUSEMENTPARK(4,10),
+	/* REMEMBER THAT*/
 	PARK(1, 10),
 	SEAPORT(4, 3000),
 	POWERPLANT(4, 3000),
@@ -64,6 +67,8 @@ public enum MicropolisTool
 		case FIRE:
 		case POLICE:
 		case STADIUM:
+		/*IDK WHAT THIS WILL DO */
+		case AMUSEMENTPARK:
 		case SEAPORT:
 		case POWERPLANT:
 		case NUCLEAR:
