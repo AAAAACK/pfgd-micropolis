@@ -121,6 +121,7 @@ public class Micropolis
 	int policeCount;
 	int fireStationCount;
 	int stadiumCount;
+	int amusementparkCount;
 	int coalCount;
 	int nuclearCount;
 	int seaportCount;
@@ -534,6 +535,7 @@ public class Micropolis
 		policeCount = 0;
 		fireStationCount = 0;
 		stadiumCount = 0;
+		amusementparkCount = 0;
 		coalCount = 0;
 		nuclearCount = 0;
 		seaportCount = 0;
@@ -1465,6 +1467,8 @@ public class Micropolis
 		bb.put("POLICESTATION", new MapScanner(this, MapScanner.B.POLICESTATION));
 		bb.put("STADIUM_EMPTY", new MapScanner(this, MapScanner.B.STADIUM_EMPTY));
 		bb.put("STADIUM_FULL", new MapScanner(this, MapScanner.B.STADIUM_FULL));
+		/*THIS IS WHERE THE amusementpark IS AT*/
+		bb.put("AMUSEMENTPARK", new MapScanner(this, MapScanner.B.AMUSEMENTPARK));
 		bb.put("AIRPORT", new MapScanner(this, MapScanner.B.AIRPORT));
 		bb.put("SEAPORT", new MapScanner(this, MapScanner.B.SEAPORT));
 
@@ -2622,6 +2626,12 @@ public class Micropolis
 		case 63:
 			if (trafficAverage > 60) {
 				sendMessage(MicropolisMessage.HIGH_TRAFFIC);
+			}
+			break;
+		case 66:
+			resCap = (resPop > 600 && amusementparkCount == 0);
+			if (resCap) {
+				sendMessage(MicropolisMessage.NEED_AMUSEMENTPARK);
 			}
 			break;
 		default:

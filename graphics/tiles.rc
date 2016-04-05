@@ -1009,3 +1009,22 @@
 957   misc_animation@0,2080
 958   misc_animation@0,2096
 959   misc_animation@0,2112
+#WHY IS IT KEEP RESETTING THIS THING?!#
+# BEGIN amusement park #
+960   amusementpark@0,0            (conducts)
+961   amusementpark@16,0           (conducts)
+962   amusementpark@32,0           (conducts)
+963   amusementpark@48,0           (conducts)
+964   amusementpark@0,16           (conducts)
+965   amusementpark@16,16    (zone)(conducts)(building=4x4)(behavior=AMUSEMENTPARK)(description=#18)
+966   amusementpark@32,16          (conducts)
+967   amusementpark@48,16          (conducts)
+968   amusementpark@0,32           (conducts)
+969   amusementpark@16,32          (conducts)
+970   amusementpark@32,32          (conducts)
+971   amusementpark@48,32          (conducts)
+972   amusementpark@0,48           (conducts)
+973   amusementpark@16,48          (conducts)
+974   amusementpark@32,48          (conducts)
+975   amusementpark@48,48          (conducts)
+

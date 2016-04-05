@@ -80,6 +80,9 @@ class MapScanner extends TileBehavior
 		case STADIUM_FULL:
 			doStadiumFull();
 			return;
+		case AMUSEMENTPARK:
+			doAmusementpark();
+			return;
 		case AIRPORT:
 			doAirport();
 			return;
@@ -189,6 +192,54 @@ class MapScanner extends TileBehavior
 
 		city.powerPlants.add(new CityLocation(xpos,ypos));
 	}
+	/*ADDITION WAS MADE HERE?*/
+	
+	void doAmusementpark()
+	{
+		boolean powerOn = checkZonePower();
+		city.amusementparkCount++;
+		int value = 0;
+		if ((city.cityTime % 8) == 0) {
+			repairZone(AMUSEMENTPARK, 4);
+		}
+		
+		if (powerOn){
+			int trafficGood;
+			if (city.trafficAverage>60){
+				value =1;
+			}
+			if (city.trafficAverage<60){
+				value =3;
+			}
+			if (3 > PRNG.nextInt(6))
+			{
+				trafficGood = makeTraffic(ZoneType.COMMERCIAL);
+			}
+			else
+			{
+				trafficGood = 1;
+			}
+
+			if (trafficGood == 1)
+			{
+				city.comPop += value+1;
+			}
+			
+			if (trafficGood == 0)
+			{
+				city.comPop += value;
+			}
+		/*	if (city.roadEffect < 20){
+				city.comPop += 1;
+			}
+			else{
+				city.comPop += 4;
+			}*/
+		}		
+	}
+
+		
+	
 
 	void doNuclearPower()
 	{
